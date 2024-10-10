@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/tornado/page.xsd">
+	<import>
+		<page identifier="de.trlevel.generators">
+			<pageType>system</pageType>
+			<controller>app\form\DustGeneratorForm</controller>
+			<name language="de">Staub Generator</name>
+			<name language="en">Dust generator</name>
+			<allowSpidersToIndex>1</allowSpidersToIndex>
+			
+			<content language="en">
+				<title>Dust generator</title>
+			</content>
+			<content language="de">
+				<title>Staub Generator</title>
+			</content>
+		</page>
+
+		<page identifier="de.trlevel.generators">
+			<pageType>system</pageType>
+			<controller>app\form\DealerGeneratorForm</controller>
+			<name language="de">Händler Generator</name>
+			<name language="en">Dealer generator</name>
+			<allowSpidersToIndex>1</allowSpidersToIndex>
+			
+			<content language="en">
+				<title>Dealer generator</title>
+			</content>
+			<content language="de">
+				<title>Händler Generator</title>
+			</content>
+		</page>
+	</import>
+</data>

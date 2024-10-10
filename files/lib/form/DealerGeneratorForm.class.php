@@ -15,12 +15,6 @@ class DealerGeneratorForm extends AbstractForm	{
      * @var string[]
      */
     protected array $paymentItems = [
-        'QUEST_ITEM1',
-		'QUEST_ITEM2',
-		'QUEST_ITEM3',
-		'QUEST_ITEM4',
-		'QUEST_ITEM5',
-		'QUEST_ITEM6',
 		'PUZZLE_ITEM1',
 		'PUZZLE_ITEM2',
 		'PUZZLE_ITEM3',
@@ -76,30 +70,9 @@ class DealerGeneratorForm extends AbstractForm	{
 		'KEY_ITEM7_COMBO2',
 		'KEY_ITEM8_COMBO1',
 		'KEY_ITEM8_COMBO2',
-		'PICKUP_ITEM1',
-		'PICKUP_ITEM2',
-		'PICKUP_ITEM3',
-		'PICKUP_ITEM4',
-		'PICKUP_ITEM1_COMBO1',
-		'PICKUP_ITEM1_COMBO2',
-		'PICKUP_ITEM2_COMBO1',
-		'PICKUP_ITEM2_COMBO2',
-		'PICKUP_ITEM3_COMBO1',
-		'PICKUP_ITEM3_COMBO2',
-		'PICKUP_ITEM4_COMBO1',
-		'PICKUP_ITEM4_COMBO2',
-		'EXAMINE1',
-		'EXAMINE2',
-		'EXAMINE3',       
     ];
 
 	protected array $buyItems = [
-        'QUEST_ITEM1',
-		'QUEST_ITEM2',
-		'QUEST_ITEM3',
-		'QUEST_ITEM4',
-		'QUEST_ITEM5',
-		'QUEST_ITEM6',
 		'PUZZLE_ITEM1',
 		'PUZZLE_ITEM2',
 		'PUZZLE_ITEM3',
@@ -154,22 +127,37 @@ class DealerGeneratorForm extends AbstractForm	{
 		'KEY_ITEM7_COMBO1',
 		'KEY_ITEM7_COMBO2',
 		'KEY_ITEM8_COMBO1',
-		'KEY_ITEM8_COMBO2',
-		'PICKUP_ITEM1',
-		'PICKUP_ITEM2',
-		'PICKUP_ITEM3',
-		'PICKUP_ITEM4',
-		'PICKUP_ITEM1_COMBO1',
-		'PICKUP_ITEM1_COMBO2',
-		'PICKUP_ITEM2_COMBO1',
-		'PICKUP_ITEM2_COMBO2',
-		'PICKUP_ITEM3_COMBO1',
-		'PICKUP_ITEM3_COMBO2',
-		'PICKUP_ITEM4_COMBO1',
-		'PICKUP_ITEM4_COMBO2',
-		'EXAMINE1',
-		'EXAMINE2',
-		'EXAMINE3',       
+		'KEY_ITEM8_COMBO2',  
+    ];
+
+	protected array $confirmKeys = [
+		'FORWARD',
+		'BACK',
+		'LEFT',
+		'RIGHT',
+		'WALK',
+		'SPRINT',
+		'CROUCH',
+		'JUMP',
+		'ROLL',
+		'ACTION',
+		'DRAW',
+		'LOOK', 
+    ];
+
+	protected array $cancelKeys = [
+		'FORWARD',
+		'BACK',
+		'LEFT',
+		'RIGHT',
+		'WALK',
+		'SPRINT',
+		'CROUCH',
+		'JUMP',
+		'ROLL',
+		'ACTION',
+		'DRAW',
+		'LOOK', 
     ];
 
 
@@ -181,20 +169,23 @@ class DealerGeneratorForm extends AbstractForm	{
 	
 	protected string $positioningSpeed = '2';
 	protected int $selectedPaymentItem = 0;
-	protected int $selectedBuyItem = 0;
+	protected int $selectedBuyItem = 1;
+	protected int $selectedConfirmKey = 9;
+	protected int $selectedCancelKey = 4;
+
+
 	protected string $cost = '1';
 	protected string $buyItem = '';
-	protected string $buyValue = '';
+	protected string $buyValue = '1';
 	protected string $confirmKey = '';
 	protected string $cancelKey = '';
 	protected string $askForBuyingText = '';
 	protected string $thanksText = '';
-	protected string $thanksTextDuration = '';
+	protected string $thanksTextDuration = '2';
 	protected string $notEnoughMoneyText = '';
-	protected string $notEnoughMoneyTextDuration = '';
+	protected string $notEnoughMoneyTextDuration = '2';
 	protected string $nextTimeText = '';
-	protected string $nextTimeTextDuration = '';
-	protected string $languageTestTR = '';
+	protected string $nextTimeTextDuration = '2';
 	
 	
 
@@ -261,9 +252,6 @@ class DealerGeneratorForm extends AbstractForm	{
 		if (isset($_POST['nextTimeTextDuration'])) {
             $this->nextTimeTextDuration = StringUtil::trim($_POST['nextTimeTextDuration']);
         }
-		if (isset($_POST['languageTestTR'])) {
-            $this->languageTestTR = StringUtil::trim($_POST['languageTestTR']);
-        }
 		
 	}
 
@@ -304,15 +292,18 @@ class DealerGeneratorForm extends AbstractForm	{
 			'selectedBuyItem' => $this->selectedBuyItem,
 			'buyValue' => $this->buyValue,
 			'confirmKey' => $this->confirmKey,
+			'confirmKeys' => $this->confirmKeys,
+			'selectedConfirmKey' => $this->selectedConfirmKey,
 			'cancelKey' => $this->cancelKey,
-			'askForBuyingText' => $this->askForBuyingText,
-			'thanksText' => $this->thanksText,
+			'cancelKeys' => $this->cancelKeys,
+			'selectedCancelKey' => $this->selectedCancelKey,
+			'askForBuyingText' => $this->askForBuyingText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.askForBuyingTextCode'),
+			'thanksText' => $this->thanksText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.thanksTextCode'),
 			'thanksTextDuration' => $this->thanksTextDuration,
 			'notEnoughMoneyText' => $this->notEnoughMoneyText,
 			'notEnoughMoneyTextDuration' => $this->notEnoughMoneyTextDuration,
-			'nextTimeText' => $this->nextTimeText,
+			'nextTimeText' => $this->nextTimeText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.nextTimeTextCode'),
 			'nextTimeTextDuration' => $this->nextTimeTextDuration,
-			'languageTestTR' => $this->languageTestTR = WCF::getLanguage()->get('de.trlevel.particleGenerator.XY'),
 			
 			
 		]);

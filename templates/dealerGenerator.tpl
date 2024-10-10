@@ -10,7 +10,7 @@
 
       <div class="boxContent">
           <div class="discussionProviderCtaContainer">
-              <a href="https://www.trlevel.de/lexicon/index.php?entry/689-staubpartikel-particleemitter-tutorial-generator/" class="button buttonPrimary">{lang}trlevel.particleGenerator.button.title{/lang}</a>
+              <a href="https://www.trlevel.de/lexicon/index.php?entry/692" class="button buttonPrimary">{lang}trlevel.particleGenerator.dealer.button.title{/lang}</a>
           </div>
       </div>
   </section>
@@ -80,7 +80,7 @@
                     </dd>
                 </dl>
             </li>
-            <li class="generatorBox2">
+            <li class="generatorBox1">
                 <dl>
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.paymentItem{/lang}</h2>
                     <dd>
@@ -103,7 +103,7 @@
                     </dd>
                 </dl>
             </li>
-            <li class="generatorBox2">
+            <li class="generatorBox1">
             <dl>
             <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.buyItem{/lang}</h2>
                 <dd>
@@ -131,8 +131,12 @@
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.confirmKey{/lang}</h2>
 
                     <dd>
-                        <input type="text" id="confirmKey" name="confirmKey" value="{$confirmKey}">
-                        <small>{lang}trlevel.particleGenerator.dealer.confirmKey.description{/lang}</small>
+                        <select name="buytItem">
+                            {foreach from=$confirmKeys item=confirmKey key=key}
+                            <option value="{$key}"{if $selectedConfirmKey == $key} selected{/if}>{$confirmKey}</option>
+                            {/foreach}
+                            <small>{lang}trlevel.particleGenerator.dealer.confirmKey.description{/lang}</small>
+                        </select>
                     </dd>
                 </dl>
             </li>
@@ -141,17 +145,19 @@
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.cancelKey{/lang}</h2>
 
                     <dd>
-                        <input type="text" id="cancelKey" name="cancelKey" value="{$cancelKey}">
-                        <small>{lang}trlevel.particleGenerator.dealer.cancelKey.description{/lang}</small>
+                    <select name="buytItem">
+                        {foreach from=$cancelKeys item=cancelKey key=key}
+                        <option value="{$key}"{if $selectedCancelKey == $key} selected{/if}>{$cancelKey}</option>
+                        {/foreach}
+                        <small>{lang}trlevel.particleGenerator.dealer.confirmKey.description{/lang}</small>
+                    </select>
                     </dd>
                 </dl>
             </li>
             <li class="generatorBox1">
                 <dl>
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.askForBuyingText{/lang}</h2>
-
-                    <dd>
-                        <input type="text" id="askForBuyingText" name="askForBuyingText" value="{$askForBuyingText}">
+                        <textarea id="askForBuyingText" name="askForBuyingText" cols="35" rows="4">{$askForBuyingText}</textarea>
                         <small>{lang}trlevel.particleGenerator.dealer.askForBuyingText.description{/lang}</small>
                     </dd>
                 </dl>
@@ -161,7 +167,7 @@
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.thanksText{/lang}</h2>
 
                     <dd>
-                        <input type="text" id="thanksText" name="thanksText" value="{$thanksText}">
+                        <textarea id="thanksText" name="thanksText" cols="35" rows="4">{$thanksText}</textarea>
                         <small>{lang}trlevel.particleGenerator.dealer.thanksText.description{/lang}</small>
                     </dd>
                 </dl>
@@ -201,31 +207,26 @@
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.nextTimeText{/lang}</h2>
 
                     <dd>
-                        <input type="text" id="nextTimeText" name="nextTimeText" value="{$nextTimeText}">
+                        <textarea id="nextTimeText" name="nextTimeText" cols="35" rows="4">{$nextTimeText}</textarea>
                         <small>{lang}trlevel.particleGenerator.dealer.nextTimeText.description{/lang}</small>
                     </dd>
                 </dl>
             </li>
-            <li class="generatorBox11>
+            <li class="generatorBox11">
                 <dl>
                 <h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.nextTimeTextDuration{/lang}</h2>
-
                     <dd>
                         <input type="text" id="nextTimeTextDuration" name="nextTimeTextDuration" value="{$nextTimeTextDuration}">
                         <small>{lang}trlevel.particleGenerator.dealer.nextTimeTextDuration.description{/lang}</small>
                     </dd>
                 </dl>
             </li>
-
         </ul>
    </form>
 
-   {$languageTestTR}
 
    <div id="luaCodeAnker"></div>
-       <dl><h2 class="sectionTitle">{lang}trlevel.particleGenerator.luaCode{/lang}</h2></dl>
-       
-       {lang}trlevel.particleGenerator.dealerCodeToScript.description{/lang}
+       <dl><h2 class="sectionTitle">{lang}trlevel.particleGenerator.dealer.luaCode{/lang}</h2></dl>
        
        <div class="codeBox">
            <code>
@@ -234,56 +235,36 @@
 -- Koordinaten des Händlers, bei dem Lara zum Kauf hingezogen werden soll (gebe die Position der Volume Box ein oder wenn du eine andere Position möchtest, füge diese hier ein.)
 local coordinates = TEN.Vec3(54784, -0, 67072)
 
--- Richtung von Lara, nachdem sie zur Händlerposition gezogen wurde (0 = NORDEN, 90 = OST, 180 = Süden, 270 = Westen)
-local direction = 0
+local direction = {$direction}
 
--- Größe der CineBars in px
-local cineBarsWeight = 120
+local cineBarsWeight = {$cineBarsWeight}
 
--- Geschwindigkeit, mit der die Cinebar erstellt wird (Sekunden x 30)
-local cineBarsCreationSpeed = 90
+local cineBarsCreationSpeed = {$cineBarsCreationSpeed}
 
--- Positionierung von Lara in X Sekunden
-local positioningSpeed = 2
+local positioningSpeed = {$positioningSpeed}
 
--- Welches Objekt soll zur Zahlung verwendet werden?
-local paymentItem = TEN.Objects.ObjID.PUZZLE_ITEM9
+local paymentItem = TEN.Objects.ObjID.{foreach from=$paymentItems item=paymentItem key=key}{if $selectedPaymentItem == $key}{$paymentItem}{/if}{/foreach}
 
--- Wieviele Objekte werden für den Kauf benötigt?
-local cost = 1
+local cost = {$cost}
 
--- Welches Item kann gekauft werden?
-local buyItem = TEN.Objects.ObjID.BIGMEDI_ITEM
+local buyItem = TEN.Objects.ObjID.{foreach from=$buyItems item=buyItem key=key}{if $selectedBuyItem == $key}{$buyItem}{/if}{/foreach}
 
--- Wieviele Items werden je Kauf erhalten?
-local buyValue = 1
+local buyValue = {$buyValue}
 
--- Tastatur Befehl zum Bestätigen der Zahlung
-local confirmKey = ActionID.ACTION
+local confirmKey = ActionID.{$confirmKey}
 
--- Tastatur Befehl zum Ablehnen des Kaufes (INVENTORY = ESC, aber es funktioniert nicht richtig, weil das Inventar geöffnet wird...)
-local cancelKey = ActionID.WALK
+local cancelKey = ActionID.{$cancelKey}
 
--- Text für die Händleranfrage
-local askForBuyingText = "Hey, do you want to buy? YES - (ACTION) NO - (WALK)"
+local askForBuyingText = "{$askForBuyingText}"
+local thanksText = "{$thanksText}"
+local thanksTextDuration = {$thanksTextDuration}
 
--- Text, nachdem Lara die Artikel gekauft hat
-local thanksText = "Thx for buying!"
+local notEnoughMoneyText = "{$notEnoughMoneyText}"
+local notEnoughMoneyTextDuration = {$notEnoughMoneyTextDuration}
 
--- Dauer der Anzeige des Textes „Lara hatte gekauft“ (in Sekunden)
-local thanksTextDuration = 2
+local nextTimeText = "{$nextTimeText}"
+local nextTimeTextDuration = {$nextTimeTextDuration}
 
--- Text wenn Lara nicht genug Geld hat
-local notEnoughMoneyText = "Oh dear, you dont have enough money!"
-
--- Dauer der Anzeige des "Nicht genug Geld" (in Sekunden)
-local notEnoughMoneyTextDuration = 2
-
--- Text, wenn der Spieler sich dafür entscheidet, es nicht zu kaufen
-local nextTimeText = "Ok, then another time!"
-
--- Dauer der Anzeige des "Nicht kaufen Text" (in Sekunden)
-local nextTimeTextDuration = 2
 
 -- Initialise local Variables
 local endDialog = false
@@ -383,7 +364,6 @@ end
            </code>
 
            <button class="button " data-copy="#luaCodeCopy">{lang}trlevel.particleGenerator.button.copy{/lang}</button>
-           <div class="msg"></div>
        </div>
 
 {include file='footer'}

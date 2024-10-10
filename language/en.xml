@@ -2,49 +2,51 @@
 <language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="en" languagename="English" countrycode="gb">
 	<import>
 		<category name="trlevel.particleGenerator">
-			<item name="trlevel.particleGenerator.dustGenerator.luaCode"><![CDATA[LUA Code]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.poisionMode.description"><![CDATA[If you want Lara to be poisoned when she touches the particle, enter “true”; if not, enter “false”.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.poisionMode"><![CDATA[Poisoning]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.damageMode.description"><![CDATA[Enter “true” if you want Lara to be harmed when she touches the particle and “false” if not.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.damageMode"><![CDATA[Damage]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.lifeTime"><![CDATA[Particle lifetime]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.lifeTime.description"><![CDATA[Larger values create several particle effects. Enter the seconds here.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.endSizeTolerance"><![CDATA[End Size]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.endSizeTolerance.description"><![CDATA[Random start size (from 1-x), 10 is about the size of Lara's head, set more than 2 if you want real wool mice.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.startSizeTolerance.description"><![CDATA[Random end size (from 1-x), 10 is about the size of Lara's head, set more than 2 if you want real wool mice.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.startSizeTolerance"><![CDATA[Start Size]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.blendMode"><![CDATA[BlendMode]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.blendMode.description"><![CDATA[Set the mode / how the particles or the sprite should look.<br>
+			<item name="trlevel.particleGenerator.luaCode"><![CDATA[LUA Code]]></item>
+			<item name="trlevel.particleGenerator.poisionModescription"><![CDATA[If you want Lara to be poisoned when she touches the particle, enter “true”; if not, enter “false”.]]></item>
+			<item name="trlevel.particleGenerator.poisionMode"><![CDATA[Poisoning]]></item>
+			<item name="trlevel.particleGenerator.damageModescription"><![CDATA[Enter “true” if you want Lara to be harmed when she touches the particle and “false” if not.]]></item>
+			<item name="trlevel.particleGenerator.damageMode"><![CDATA[Damage]]></item>
+			<item name="trlevel.particleGenerator.lifeTime"><![CDATA[Particle lifetime]]></item>
+			<item name="trlevel.particleGenerator.lifeTime.description"><![CDATA[Larger values create several particle effects. Enter the seconds here.]]></item>
+			<item name="trlevel.particleGenerator.endSizeTolerance"><![CDATA[End Size]]></item>
+			<item name="trlevel.particleGenerator.endSizeTolerance.description"><![CDATA[Random end size (from 1-x), 10 is about the size of Lara's head.]]></item>
+			<item name="trlevel.particleGenerator.startSizeTolerance.description"><![CDATA[Random start size (from 1-x), 10 is about the size of Lara's head.]]></item>
+			<item name="trlevel.particleGenerator.startSizeTolerance"><![CDATA[Start Size]]></item>
+			<item name="trlevel.particleGenerator.blendMode"><![CDATA[BlendMode]]></item>
+			<item name="trlevel.particleGenerator.blendModescription"><![CDATA[Set the mode / how the particles or the sprite should look.<br>
 Please look here for the values: <a href=“https://tombengine.github.io/4%20enums/Effects.BlendID.html”>TombEngine - BlendMode</a> -- The best value for e.g. dust particles is ADDITIVE.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorTo"><![CDATA[Color to]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorTo.blue"><![CDATA[Blue]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorTo.green"><![CDATA[Green]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorTo.red"><![CDATA[Red]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorTo.description"><![CDATA[Set the color that the particles should have at the end (0-255).]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorFrom.description"><![CDATA[Set the color that the particles should initially have after spawning (0-255).]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorFrom.blue"><![CDATA[Blue]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorFrom.green"><![CDATA[Green]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorFrom.red"><![CDATA[Red]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.colorFrom"><![CDATA[Color from]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.staticSlot"><![CDATA[Static Slot]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.spriteIndex.description"><![CDATA[Enter the sprite ID here. This is located in the DEFAULT_SPRITE object.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.staticSlot.description"><![CDATA[Please enter the Static ID here. If the effect is to be used on several static objects, separate them with a “comma”. Leave out the comma for the last ID (1,2,3...)
+			<item name="trlevel.particleGenerator.colorTo"><![CDATA[Color to]]></item>
+			<item name="trlevel.particleGenerator.colorTo.blue"><![CDATA[Blue]]></item>
+			<item name="trlevel.particleGenerator.colorTo.green"><![CDATA[Green]]></item>
+			<item name="trlevel.particleGenerator.colorTo.red"><![CDATA[Red]]></item>
+			<item name="trlevel.particleGenerator.colorTo.description"><![CDATA[Set the color that the particles should have at the end (0-255).]]></item>
+			<item name="trlevel.particleGenerator.colorFrom.description"><![CDATA[Set the color that the particles should initially have after spawning (0-255).]]></item>
+			<item name="trlevel.particleGenerator.colorFrom.blue"><![CDATA[Blue]]></item>
+			<item name="trlevel.particleGenerator.colorFrom.green"><![CDATA[Green]]></item>
+			<item name="trlevel.particleGenerator.colorFrom.red"><![CDATA[Red]]></item>
+			<item name="trlevel.particleGenerator.colorFrom"><![CDATA[Color from]]></item>
+			<item name="trlevel.particleGenerator.staticSlot"><![CDATA[Static Slot]]></item>
+			<item name="trlevel.particleGenerator.spriteIndex.description"><![CDATA[Enter the sprite ID here. This is located in the DEFAULT_SPRITE object.]]></item>
+			<item name="trlevel.particleGenerator.staticSlot.description"><![CDATA[Please enter the Static ID here. If the effect is to be used on several static objects, separate them with a “comma”. Leave out the comma for the last ID (1,2,3...)
 If no static slot is to be used, please leave this field empty.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.moveableSlot"><![CDATA[Moveable Slot]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.moveableSlot.description"><![CDATA[Please enter the slot ID here. If using multiple slots, separate them with a “comma” and leave out the comma for the last one (1,2,3...). Please leave the field empty if no moveable slot is to be used.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.button.copy"><![CDATA[Copy LUA code]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.speed"><![CDATA[Speed]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.spriteIndex"><![CDATA[Sprite ID]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tolerance"><![CDATA[Tolerance]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.density"><![CDATA[Density]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.luaCodeToScript"><![CDATA[LevelFuncs.OnLoop = function()
+			<item name="trlevel.particleGenerator.moveableSlot"><![CDATA[Moveable Slot]]></item>
+			<item name="trlevel.particleGenerator.moveableSlot.description"><![CDATA[Please enter the slot ID here. If using multiple slots, separate them with a “comma” and leave out the comma for the last one (1,2,3...). Please leave the field empty if no moveable slot is to be used.]]></item>
+			<item name="trlevel.particleGenerator.button.copy"><![CDATA[Copy LUA code]]></item>
+			<item name="trlevel.particleGenerator.speed"><![CDATA[Speed]]></item>
+			<item name="trlevel.particleGenerator.spriteIndex"><![CDATA[Sprite ID]]></item>
+			<item name="trlevel.particleGenerator.tolerance"><![CDATA[Tolerance]]></item>
+			<item name="trlevel.particleGenerator.density"><![CDATA[Density]]></item>
+			<item name="trlevel.particleGenerator.luaCodeToScript"><![CDATA[LevelFuncs.OnLoop = function()
 	Add{$functionName}()
 end
 
 function Add{$functionName}()
 
 	local staticStartSlots = {literal}{{/literal}{$staticSlot}{literal}}{/literal}
+
 	local moveableStartSlots = {literal}{{/literal}{$moveableSlot}{literal}}{/literal}
+
 	local xPosTolerance = {$xPosTolerance}
 
 	local yPosTolerance = {$yPosTolerance}
@@ -105,7 +107,7 @@ function Add{$functionName}()
 		local yVelo = 0 + math.random(ySpeed) - math.random(ySpeed)
 		local zVelo = 0 + math.random(zSpeed) - math.random(zSpeed)
 
-		for i=1,math.random(1,{$density}) do
+		for i=1,math.random(1,{$density}{$rotationTolerance}) do
 			EmitParticle(
 				Vec3(xPos, yPos, zPos), --start position
 				Vec3(xVelo, yVelo, zVelo), -- velocity
@@ -124,43 +126,25 @@ function Add{$functionName}()
 		end
 	end
 end]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.functionName"><![CDATA[Name of the particle]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.functionName.description"><![CDATA[Enter the name of the function here.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.luaCodeToScript.description"><![CDATA[<div class="info">
-The LUA code is generated based on the values, so it can be adopted without changes. <br><br>
-
-If you have already included a “LevelFuncs.OnLoop = function() .. end” block in the script, you only need to add the following code “<strong>Add{$functionName}()</strong>” to it. <br>
-Example:
-<br>
-<pre><strong>
-LevelFuncs.OnLoop = function()
-	Add{$functionName}()
-end
-</strong>
-</pre>
-</div>
-<br>]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.speed.zSpeed"><![CDATA[Z Speed]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.speed.ySpeed"><![CDATA[Y Speed]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.speed.xSpeed"><![CDATA[X Speed]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tolerance.xTol"><![CDATA[X Tolerance]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tolerance.yTol"><![CDATA[Y Tolerance]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tolerance.zTol"><![CDATA[Z Toleranz]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.gravityTolerance"><![CDATA[Gravity Tolerance]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.gravityTolerance.description"><![CDATA[Set a random gravity tolerance. Larger values cause the particles to rise or fall faster.]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.rotationTolerance"><![CDATA[Rotation tolerance]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.rotationTolerance.description"><![CDATA[Set a random rotation. Larger values cause the particles to rotate faster. ]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tutorial"><![CDATA[Tutorial]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.button.title"><![CDATA[To the tutorial]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.title"><![CDATA[Particle Generator - LUA Code]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.density.description"><![CDATA[Adjust the random density (higher values generate more dust particles per frame).<br>
-<strong class="particleGeneratorWarning">Please choose the values carefully! Higher values can affect performance. A value of "1-25" is recommended. Each level builder must check higher values themselves. Could be problematic with several particle effects in the level. </strong>]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.speed.description"><![CDATA[Define the tolerance of the random speed of particles. ]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.tolerance.description"><![CDATA[Define the area in which the particles should appear randomly from the object (1024 = 1 square)]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.poisionMode.chooseYes"><![CDATA[Yes]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.poisionMode.chooseNo"><![CDATA[No]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.damageMode.chooseYes"><![CDATA[Yes]]></item>
-			<item name="trlevel.particleGenerator.dustGenerator.damageMode.chooseNo"><![CDATA[No]]></item>
+			<item name="trlevel.particleGenerator.functionName"><![CDATA[Name of the particle]]></item>
+			<item name="trlevel.particleGenerator.functionName.description"><![CDATA[Enter the name of the function here.]]></item>
+			<item name="trlevel.particleGenerator.luaCodeToScript.description"/>
+			<item name="trlevel.particleGenerator.speed.zSpeed"><![CDATA[Z Speed]]></item>
+			<item name="trlevel.particleGenerator.speed.ySpeed"><![CDATA[Y Speed]]></item>
+			<item name="trlevel.particleGenerator.speed.xSpeed"><![CDATA[X Speed]]></item>
+			<item name="trlevel.particleGenerator.tolerance.xTol"><![CDATA[X Tolerance]]></item>
+			<item name="trlevel.particleGenerator.tolerance.yTol"><![CDATA[Y Tolerance]]></item>
+			<item name="trlevel.particleGenerator.tolerance.zTol"><![CDATA[Z Toleranz]]></item>
+			<item name="trlevel.particleGenerator.gravityTolerance"><![CDATA[Gravity Tolerance]]></item>
+			<item name="trlevel.particleGenerator.gravityTolerance.description"><![CDATA[Set a random gravity tolerance. Larger values cause the particles to rise or fall faster.]]></item>
+			<item name="trlevel.particleGenerator.rotationTolerance"><![CDATA[Rotation tolerance]]></item>
+			<item name="trlevel.particleGenerator.rotationTolerance.description"><![CDATA[Set a random rotation. Larger values cause the particles to rotate faster. ]]></item>
+			<item name="trlevel.particleGenerator.tutorial"><![CDATA[Tutorial]]></item>
+			<item name="trlevel.particleGenerator.button.title"><![CDATA[To the tutorial]]></item>
+			<item name="trlevel.particleGenerator.title"><![CDATA[Particle Generator - LUA Code]]></item>
+			<item name="trlevel.particleGenerator.density.description"><![CDATA[Adjust the random density (higher values generate more dust particles per frame).]]></item>
+			<item name="trlevel.particleGenerator.speed.description"><![CDATA[Define the tolerance of the random speed of particles. ]]></item>
+			<item name="trlevel.particleGenerator.tolerance.description"><![CDATA[Define the area in which the particles should appear randomly from the object (1024 = 1 square)]]></item>
 		</category>
 	</import>
 </language>
