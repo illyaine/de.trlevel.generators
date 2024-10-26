@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/5.4/language.xsd" languagecode="de" languagename="Deutsch" countrycode="de">
 	<import>
-		<category name="trlevel.particleGenerator">
-			<item name="trlevel.particleGenerator.luaCode"><![CDATA[LUA Code]]></item>
-			<item name="trlevel.particleGenerator.poisionModescription"><![CDATA[Wenn Lara bei Berührung des Particles vergiftet werden soll "true" eingeben, falls nicht "false".]]></item>
-			<item name="trlevel.particleGenerator.poisionMode"><![CDATA[Vergiftung]]></item>
-			<item name="trlevel.particleGenerator.damageModescription"><![CDATA[Wenn Lara bei Berührung des Partikels schaden nehmen soll "true" eingeben, falls nicht "false".]]></item>
-			<item name="trlevel.particleGenerator.damageMode"><![CDATA[Schaden]]></item>
-			<item name="trlevel.particleGenerator.lifeTime"><![CDATA[Partikel Lebenszeit]]></item>
-			<item name="trlevel.particleGenerator.lifeTime.description"><![CDATA[Größere Werte erzeugen mehrere Partikeleffekte. Hier die Sekunden eingeben.]]></item>
-			<item name="trlevel.particleGenerator.endSizeTolerance"><![CDATA[Endgröße]]></item>
-			<item name="trlevel.particleGenerator.endSizeTolerance.description"><![CDATA[Zufällige End Größe (von 1-x), 10 ist ungefähr so groß wie Laras Kopf.]]></item>
-			<item name="trlevel.particleGenerator.startSizeTolerance.description"><![CDATA[Zufällige Start Größe (von 1-x), 10 ist ungefähr so groß wie Laras Kopf.]]></item>
-			<item name="trlevel.particleGenerator.startSizeTolerance"><![CDATA[Startgröße]]></item>
-			<item name="trlevel.particleGenerator.blendMode"><![CDATA[BlendMode]]></item>
-			<item name="trlevel.particleGenerator.blendModescription"><![CDATA[Setze den Modus / Wie die Partikel, bzw das Sprite aussehen soll.<br>
+		<category name="trlevel.generators.dustGenerator">
+			<item name="trlevel.generators.dustGenerator.luaCode"><![CDATA[LUA Code]]></item>
+			<item name="trlevel.generators.dustGenerator.poisionMode.description"><![CDATA[Wenn Lara bei Berührung des Particles vergiftet werden soll "true" eingeben, falls nicht "false".]]></item>
+			<item name="trlevel.generators.dustGenerator.poisionMode"><![CDATA[Vergiftung]]></item>
+			<item name="trlevel.generators.dustGenerator.damageMode.description"><![CDATA[Wenn Lara bei Berührung des Partikels schaden nehmen soll "true" eingeben, falls nicht "false".]]></item>
+			<item name="trlevel.generators.dustGenerator.damageMode"><![CDATA[Schaden]]></item>
+			<item name="trlevel.generators.dustGenerator.lifeTime"><![CDATA[Partikel Lebenszeit]]></item>
+			<item name="trlevel.generators.dustGenerator.lifeTime.description"><![CDATA[Größere Werte erzeugen mehrere Partikeleffekte. Hier die Sekunden eingeben.]]></item>
+			<item name="trlevel.generators.dustGenerator.endSizeTolerance"><![CDATA[Endgröße]]></item>
+			<item name="trlevel.generators.dustGenerator.endSizeTolerance.description"><![CDATA[Zufällige Start Größe (von 1-x), 10 ist ungefähr so groß wie Laras Kopf, stelle mehr als 2 ein, wenn du echte Wollmäuse haben möchtest.]]></item>
+			<item name="trlevel.generators.dustGenerator.startSizeTolerance.description"><![CDATA[Zufällige End Größe (von 1-x), 10 ist ungefähr so groß wie Laras Kopf, stelle mehr als 2 ein, wenn du echte Wollmäuse haben möchtest.]]></item>
+			<item name="trlevel.generators.dustGenerator.startSizeTolerance"><![CDATA[Startgröße]]></item>
+			<item name="trlevel.generators.dustGenerator.blendMode"><![CDATA[BlendMode]]></item>
+			<item name="trlevel.generators.dustGenerator.blendMode.description"><![CDATA[Setze den Modus / Wie die Partikel, bzw das Sprite aussehen soll.<br>
 Schau bitte hier nach den Werten nach: <a href="https://tombengine.github.io/4%20enums/Effects.BlendID.html">TombEngine - BlendMode</a> -- Der Beste Wert für z.B. Staubpartikel ist ADDITIVE.]]></item>
-			<item name="trlevel.particleGenerator.colorTo"><![CDATA[Farbe zu]]></item>
-			<item name="trlevel.particleGenerator.colorTo.blue"><![CDATA[Blau]]></item>
-			<item name="trlevel.particleGenerator.colorTo.green"><![CDATA[Grün]]></item>
-			<item name="trlevel.particleGenerator.colorTo.red"><![CDATA[Rot]]></item>
-			<item name="trlevel.particleGenerator.colorTo.description"><![CDATA[Lege die Farbe fest, die die Partikel am Ende haben sollen (0-255).]]></item>
-			<item name="trlevel.particleGenerator.colorFrom.description"><![CDATA[Lege die Farbe fest, die die Partikel nach dem Spawnen zunächst haben sollen (0-255).]]></item>
-			<item name="trlevel.particleGenerator.colorFrom.blue"><![CDATA[Blau]]></item>
-			<item name="trlevel.particleGenerator.colorFrom.green"><![CDATA[Grün]]></item>
-			<item name="trlevel.particleGenerator.colorFrom.red"><![CDATA[Rot]]></item>
-			<item name="trlevel.particleGenerator.colorFrom"><![CDATA[Farbe von]]></item>
-			<item name="trlevel.particleGenerator.staticSlot"><![CDATA[Static Slot]]></item>
-			<item name="trlevel.particleGenerator.spriteIndex.description"><![CDATA[Gebe hier die Sprite-ID an. Diese befindet sich im DEFAULT_SPRITE Objekt.]]></item>
-			<item name="trlevel.particleGenerator.staticSlot.description"><![CDATA[Hier bitte die Static ID angeben. Wenn der Effekt an mehreren Static Objekten benutzt werden soll, durch "Komma" trennen. Bei der letzten ID das Komma weg lassen (1,2,3...)
+			<item name="trlevel.generators.dustGenerator.colorTo"><![CDATA[Farbe zu]]></item>
+			<item name="trlevel.generators.dustGenerator.colorTo.blue"><![CDATA[Blau]]></item>
+			<item name="trlevel.generators.dustGenerator.colorTo.green"><![CDATA[Grün]]></item>
+			<item name="trlevel.generators.dustGenerator.colorTo.red"><![CDATA[Rot]]></item>
+			<item name="trlevel.generators.dustGenerator.colorTo.description"><![CDATA[Lege die Farbe fest, die die Partikel am Ende haben sollen (0-255).]]></item>
+			<item name="trlevel.generators.dustGenerator.colorFrom.description"><![CDATA[Lege die Farbe fest, die die Partikel nach dem Spawnen zunächst haben sollen (0-255).]]></item>
+			<item name="trlevel.generators.dustGenerator.colorFrom.blue"><![CDATA[Blau]]></item>
+			<item name="trlevel.generators.dustGenerator.colorFrom.green"><![CDATA[Grün]]></item>
+			<item name="trlevel.generators.dustGenerator.colorFrom.red"><![CDATA[Ror]]></item>
+			<item name="trlevel.generators.dustGenerator.colorFrom"><![CDATA[Farbe von]]></item>
+			<item name="trlevel.generators.dustGenerator.staticSlot"><![CDATA[Static Slot]]></item>
+			<item name="trlevel.generators.dustGenerator.spriteIndex.description"><![CDATA[Gebe hier die Sprite-ID an. Diese befindet sich im DEFAULT_SPRITE Objekt.]]></item>
+			<item name="trlevel.generators.dustGenerator.staticSlot.description"><![CDATA[Hier bitte die Static ID angeben. Wenn der Effekt an mehreren Static Objekten benutzt werden soll, durch "Komma" trennen. Bei der letzten ID das Komma weg lassen (1,2,3...)
 Falls kein Static Slot benutzt werden soll, dieses Feld bitte leer lassen.]]></item>
-			<item name="trlevel.particleGenerator.moveableSlot"><![CDATA[Moveable Slot]]></item>
-			<item name="trlevel.particleGenerator.moveableSlot.description"><![CDATA[Hier bitte die Slot ID eingeben. Bei Benutzung mehrere Slots durch "Komma" trennen, beim letzten das Komma weg lassen (1,2,3...). Das Feld bitte leer lassen, falls kein Moveable Slot benutzt werden soll.]]></item>
-			<item name="trlevel.particleGenerator.button.copy"><![CDATA[LUA Code kopieren]]></item>
-			<item name="trlevel.particleGenerator.speed"><![CDATA[Geschwindigkeit]]></item>
-			<item name="trlevel.particleGenerator.spriteIndex"><![CDATA[Sprite ID]]></item>
-			<item name="trlevel.particleGenerator.tolerance"><![CDATA[Toleranz]]></item>
-			<item name="trlevel.particleGenerator.density"><![CDATA[Dichte]]></item>
-			<item name="trlevel.particleGenerator.luaCodeToScript"><![CDATA[LevelFuncs.OnLoop = function()
+			<item name="trlevel.generators.dustGenerator.moveableSlot"><![CDATA[Moveable Slot]]></item>
+			<item name="trlevel.generators.dustGenerator.moveableSlot.description"><![CDATA[Hier bitte die Slot ID eingeben. Bei Benutzung mehrere Slots durch "Komma" trennen, beim letzten das Komma weg lassen (1,2,3...). Das Feld bitte leer lassen, falls kein Moveable Slot benutzt werden soll.]]></item>
+			<item name="trlevel.generators.dustGenerator.speed"><![CDATA[Geschwindigkeit]]></item>
+			<item name="trlevel.generators.dustGenerator.spriteIndex"><![CDATA[Sprite ID]]></item>
+			<item name="trlevel.generators.dustGenerator.tolerance"><![CDATA[Toleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.density"><![CDATA[Dichte]]></item>
+			<item name="trlevel.generators.dustGenerator.luaCodeToScript"><![CDATA[LevelFuncs.OnLoop = function()
 	Add{$functionName}()
 end
 
 function Add{$functionName}()
 
 	local staticStartSlots = {literal}{{/literal}{$staticSlot}{literal}}{/literal}
-
 	local moveableStartSlots = {literal}{{/literal}{$moveableSlot}{literal}}{/literal}
-
 	local xPosTolerance = {$xPosTolerance}
 
 	local yPosTolerance = {$yPosTolerance}
@@ -107,7 +104,7 @@ function Add{$functionName}()
 		local yVelo = 0 + math.random(ySpeed) - math.random(ySpeed)
 		local zVelo = 0 + math.random(zSpeed) - math.random(zSpeed)
 
-		for i=1,math.random(1,{$density}{$rotationTolerance}) do
+		for i=1,math.random(1,{$density}) do
 			EmitParticle(
 				Vec3(xPos, yPos, zPos), --start position
 				Vec3(xVelo, yVelo, zVelo), -- velocity
@@ -126,10 +123,10 @@ function Add{$functionName}()
 		end
 	end
 end]]></item>
-			<item name="trlevel.particleGenerator.functionName"><![CDATA[Name des Partikels]]></item>
-			<item name="trlevel.particleGenerator.functionName.description"><![CDATA[Gib hier den Namen der Funktion ein. Im Script heißt diese anschließend: <strong>Add{$functionName}()</strong><br>
+			<item name="trlevel.generators.dustGenerator.functionName"><![CDATA[Name des Partikels]]></item>
+			<item name="trlevel.generators.dustGenerator.functionName.description"><![CDATA[Gib hier den Namen der Funktion ein. Im Script heißt diese anschließend: <strong>Add{$functionName}()</strong><br>
 Der Name muss "einmalig" sein. Da dies sonst Probleme mit dem Script geben kann.]]></item>
-			<item name="trlevel.particleGenerator.luaCodeToScript.description"><![CDATA[<div class="info">
+			<item name="trlevel.generators.dustGenerator.luaCodeToScript.description"><![CDATA[<div class="info">
 Der LUA Code wird anhand der Werte generiert, somit kann dieser ohne Änderungen übernommen werden. <br><br>
 
 Wenn Ihr im Script schon einen "LevelFuncs.OnLoop = function() .. end" Block eingebaut habt, müsst Ihr nur folgenden Code "<strong>Add{$functionName}()</strong>" zu diesem hinzufügen. <br>
@@ -137,28 +134,214 @@ Beispiel:
 <br>
 <pre><strong>
 LevelFuncs.OnLoop = function()
-	AddParticles()
+	Add{$functionName}()
 end
 </strong>
 </pre>
 </div>
 <br>]]></item>
-			<item name="trlevel.particleGenerator.speed.zSpeed"><![CDATA[Z Geschwindigkeit]]></item>
-			<item name="trlevel.particleGenerator.speed.ySpeed"><![CDATA[Y Geschwindigkeit]]></item>
-			<item name="trlevel.particleGenerator.speed.xSpeed"><![CDATA[X Geschwindigkeit]]></item>
-			<item name="trlevel.particleGenerator.tolerance.xTol"><![CDATA[X Toleranz]]></item>
-			<item name="trlevel.particleGenerator.tolerance.yTol"><![CDATA[Y Toleranz]]></item>
-			<item name="trlevel.particleGenerator.tolerance.zTol"><![CDATA[Z Toleranz]]></item>
-			<item name="trlevel.particleGenerator.gravityTolerance"><![CDATA[Schwerkrafttoleranz]]></item>
-			<item name="trlevel.particleGenerator.gravityTolerance.description"><![CDATA[Lege eine zufällige Schwerkrafttoleranz fest. Größere Werte bewirken, dass die Partikel schneller steigen oder fallen.]]></item>
-			<item name="trlevel.particleGenerator.rotationTolerance"><![CDATA[Rotationstoleranz]]></item>
-			<item name="trlevel.particleGenerator.rotationTolerance.description"><![CDATA[Lege eine zufällige Rotation fest. Größere Werte bewirken, dass die Partikel schneller rotieren. ]]></item>
-			<item name="trlevel.particleGenerator.tutorial"><![CDATA[Tutorial]]></item>
-			<item name="trlevel.particleGenerator.button.title"><![CDATA[Zum Tutorial]]></item>
-			<item name="trlevel.particleGenerator.title"><![CDATA[Partikel Generator - LUA Code]]></item>
-			<item name="trlevel.particleGenerator.density.description"><![CDATA[Anpassen der Zufallsdichte (größere Werte erzeugen mehr Staub-Partikel pro Frame).]]></item>
-			<item name="trlevel.particleGenerator.speed.description"><![CDATA[Definiere die Toleranz der zufälligen Geschwindigkeit von Partikeln. Größre Werte beschleunigen die Partikel.]]></item>
-			<item name="trlevel.particleGenerator.tolerance.description"><![CDATA[Definiere den Bereich, in dem die Partikel zufällig vom Objekt aus erscheinen sollen (1024 = 1 Square)]]></item>
+			<item name="trlevel.generators.dustGenerator.speed.zSpeed"><![CDATA[Z Geschwindigkeit]]></item>
+			<item name="trlevel.generators.dustGenerator.speed.ySpeed"><![CDATA[Y Geschwindigkeit]]></item>
+			<item name="trlevel.generators.dustGenerator.speed.xSpeed"><![CDATA[X Geschwindigkeit]]></item>
+			<item name="trlevel.generators.dustGenerator.tolerance.xTol"><![CDATA[X Toleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.tolerance.yTol"><![CDATA[Y Toleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.tolerance.zTol"><![CDATA[Z Toleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.gravityTolerance"><![CDATA[Schwerkrafttoleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.gravityTolerance.description"><![CDATA[Lege eine zufällige Schwerkrafttoleranz fest. Größere Werte bewirken, dass die Partikel schneller steigen oder fallen.]]></item>
+			<item name="trlevel.generators.dustGenerator.rotationTolerance"><![CDATA[Rotationstoleranz]]></item>
+			<item name="trlevel.generators.dustGenerator.rotationTolerance.description"><![CDATA[Lege eine zufällige Rotation fest. Größere Werte bewirken, dass die Partikel schneller rotieren. ]]></item>
+			<item name="trlevel.generators.dustGenerator.tutorial"><![CDATA[Tutorial]]></item>
+			<item name="trlevel.generators.dustGenerator.button.title"><![CDATA[Zum Tutorial]]></item>
+			<item name="trlevel.generators.dustGenerator.title"><![CDATA[Partikel Generator - LUA Code]]></item>
+			<item name="trlevel.generators.dustGenerator.density.description"><![CDATA[Anpassen der Zufallsdichte (größere Werte erzeugen mehr Staub-Partikel pro Frame).<br>
+<strong class="particleGeneratorWarning">Bitte die Werte mit bedacht wählen! Höhere Werte können sich auf die Performance auswirken. Ein Wert "1-25" wird empfohlen. Höhere Werte muss jeder Levelbauer selber prüfen. Könnte problematisch mit mehreren Partikel Effekte im Level werden. </strong>]]></item>
+			<item name="trlevel.generators.dustGenerator.speed.description"><![CDATA[Definiere die Toleranz der zufälligen Geschwindigkeit von Partikeln. Größre Werte beschleunigen die Partikel.]]></item>
+			<item name="trlevel.generators.dustGenerator.tolerance.description"><![CDATA[Definiere den Bereich, in dem die Partikel zufällig vom Objekt aus erscheinen sollen (1024 = 1 Square)]]></item>
+			<item name="trlevel.generators.dustGenerator.poisionMode.chooseYes"><![CDATA[Ja]]></item>
+			<item name="trlevel.generators.dustGenerator.poisionMode.chooseNo"><![CDATA[Nein]]></item>
+			<item name="trlevel.generators.dustGenerator.damageMode.chooseYes"><![CDATA[Ja]]></item>
+			<item name="trlevel.generators.dustGenerator.damageMode.chooseNo"><![CDATA[Nein]]></item>
 		</category>
+		<category name="trlevel.generators.dealer">
+			<item name="trlevel.generators.dealer.title"><![CDATA[Händler Generator]]></item>
+			<item name="trlevel.generators.dealer.coordinates"><![CDATA[Koordinaten]]></item>
+			<item name="trlevel.generators.dealer.coordinates.description"><![CDATA[Koordinaten des Händlers, bei dem Lara zum Kauf hingezogen werden soll. Gebe die Position der Volume Box ein oder wenn du eine andere Position möchtest, füge diese hier ein.]]></item>
+			<item name="trlevel.generators.dealer.direction"><![CDATA[Richtung]]></item>
+			<item name="trlevel.generators.dealer.direction.description"><![CDATA[Richtung von Lara, nachdem sie zur Händlerposition gezogen wurde (0 = NORDEN, 90 = OST, 180 = Süden, 270 = Westen)]]></item>
+			<item name="trlevel.generators.dealer.positioningSpeed"><![CDATA[Positionierungsgeschwindigkeit]]></item>
+			<item name="trlevel.generators.dealer.positioningSpeed.description"><![CDATA[Positionierung von Lara in X Sekunden]]></item>
+			<item name="trlevel.generators.dealer.paymentItem.description"><![CDATA[Welches Objekt soll zur Zahlung verwendet werden?]]></item>
+			<item name="trlevel.generators.dealer.cost.description"><![CDATA[Wieviele Objekte werden für den Kauf benötigt?]]></item>
+			<item name="trlevel.generators.dealer.cost"><![CDATA[Kosten für den Kauf]]></item>
+			<item name="trlevel.generators.dealer.buyItem"><![CDATA[Kauf Item]]></item>
+			<item name="trlevel.generators.dealer.buyItem.description"><![CDATA[Welches Item kann gekauft werden?]]></item>
+			<item name="trlevel.generators.dealer.paymentItem"><![CDATA[Zahlungsitem]]></item>
+			<item name="trlevel.generators.dealer.buyValue"><![CDATA[Stückzahl Kaufartikel]]></item>
+			<item name="trlevel.generators.dealer.buyValue.description"><![CDATA[Wie viele Items werden je Kauf gekauft?]]></item>
+			<item name="trlevel.generators.dealer.confirmKey"><![CDATA[Kauf: Tastenbestätigung]]></item>
+			<item name="trlevel.generators.dealer.confirmKey.description"><![CDATA[Tastatur Befehl zum Bestätigen der Zahlung]]></item>
+			<item name="trlevel.generators.dealer.cancelKey"><![CDATA[Abbruch: Tastenbestätigung]]></item>
+			<item name="trlevel.generators.dealer.cancelKey.description"><![CDATA[Tastatur Befehl zum Ablehnen des Kaufes (INVENTORY = ESC, aber es funktioniert nicht richtig, weil das Inventar geöffnet wird...)]]></item>
+			<item name="trlevel.generators.dealer.askForBuyingText"><![CDATA[Händleranfrage Text]]></item>
+			<item name="trlevel.generators.dealer.askForBuyingText.description"><![CDATA[Text für die Händleranfrage]]></item>
+			<item name="trlevel.generators.dealer.thanksText"><![CDATA[Text nach dem Kauf]]></item>
+			<item name="trlevel.generators.dealer.thanksText.description"><![CDATA[Text, nachdem Lara die Artikel gekauft hat]]></item>
+			<item name="trlevel.generators.dealer.thanksTextDuration"><![CDATA[Textanzeige nach dem Kauf]]></item>
+			<item name="trlevel.generators.dealer.thanksTextDuration.description"><![CDATA[Dauer der Anzeige des Textes „Lara hatte gekauft“ (in Sekunden)]]></item>
+			<item name="trlevel.generators.dealer.notEnoughMoneyText"><![CDATA[Nicht genug Geld]]></item>
+			<item name="trlevel.generators.dealer.notEnoughMoneyText.description"><![CDATA[Text wenn Lara nicht genug Geld hat]]></item>
+			<item name="trlevel.generators.dealer.notEnoughMoneyTextDuration"><![CDATA[Dauer "Nicht genug Geld" Anzeige]]></item>
+			<item name="trlevel.generators.dealer.notEnoughMoneyTextDuration.description"><![CDATA[Dauer der Anzeige des "Nicht genug Geld" (in Sekunden)]]></item>
+			<item name="trlevel.generators.dealer.cineBarsWeight"><![CDATA[Cinematic Balken Größe]]></item>
+			<item name="trlevel.generators.dealer.cineBarsWeight.description"><![CDATA[Größe der Cinematic bar Balken (schwarze Balken am Bildschirmrand oben und unten)]]></item>
+			<item name="trlevel.generators.dealer.cineBarsCreationSpeed"><![CDATA[Cinematic Balken Geschwindigkeit]]></item>
+			<item name="trlevel.generators.dealer.cineBarsCreationSpeed.description"><![CDATA[Geschwindigkeit, mit der die Cinematic Balken erstellt werden (Sekunden x 30)]]></item>
+			<item name="trlevel.generators.dealer.nextTimeText"><![CDATA[Text ein Andermal kaufen]]></item>
+			<item name="trlevel.generators.dealer.nextTimeText.description"><![CDATA[Text, wenn der Spieler noch nichts kauft]]></item>
+			<item name="trlevel.generators.dealer.nextTimeTextDuration"><![CDATA[Ein Andermal kaufen - "Zeit"]]></item>
+			<item name="trlevel.generators.dealer.nextTimeTextDuration.description"><![CDATA[Dauer der Anzeige des "Nicht kaufen Text" (in Sekunden)]]></item>
+			<item name="trlevel.generators.dealer.tutorial"><![CDATA[Händler Tutorial]]></item>
+			<item name="trlevel.generators.dealer.luaCode"><![CDATA[LUA Code]]></item>
+			<item name="trlevel.generators.dealer.button.title"><![CDATA[Zurück zum Tutorial]]></item>
+			<item name="trlevel.generators.dealer.askForBuyingTextCode"><![CDATA[Guten Tag, möchten Sie etwas bei mir kaufen? JA - ({$confirmKey}) NEIN - ({$cancelKey})
+ACTION/WALK sind die Standard Werte.]]></item>
+			<item name="trlevel.generators.dealer.thanksTextCode"><![CDATA[Vielen Dank für Ihren Einkauf bei mir!]]></item>
+			<item name="trlevel.generators.dealer.nextTimeTextCode"><![CDATA[Vielleicht finden Sie beim nächsten mal etwas.]]></item>
+			<item name="trlevel.generators.dealer.luaCodeToScript"><![CDATA[-- Koordinaten des Händlers, bei dem Lara zum Kauf hingezogen werden soll (gebe die Position der Volume Box ein oder wenn du eine andere Position möchtest, füge diese hier ein.)
+local coordinates = TEN.Vec3(54784, -0, 67072)
+
+local direction = {$direction}
+
+local cineBarsWeight = {$cineBarsWeight}
+
+local cineBarsCreationSpeed = {$cineBarsCreationSpeed}
+
+local positioningSpeed = {$positioningSpeed}
+
+local paymentItem = TEN.Objects.ObjID.{foreach from=$paymentItems item=paymentItem key=key}{if $selectedPaymentItem == $key}{$paymentItem}{/if}{/foreach}
+
+local cost = {$cost}
+
+local buyItem = TEN.Objects.ObjID.{foreach from=$buyItems item=buyItem key=key}{if $selectedBuyItem == $key}{$buyItem}{/if}{/foreach}
+
+local buyValue = {$buyValue}
+
+local confirmKey = ActionID.{foreach from=$confirmKeys item=confirmKey key=key}{if $selectedConfirmKey == $key}{$confirmKey}{/if}{/foreach}
+
+local cancelKey = ActionID.{foreach from=$cancelKeys item=cancelKey key=key}{if $selectedCancelKey == $key}{$cancelKey}{/if}{/foreach}
+
+local askForBuyingText = "{$askForBuyingText}"
+local thanksText = "{$thanksText}"
+local thanksTextDuration = {$thanksTextDuration}
+
+local notEnoughMoneyText = "{$notEnoughMoneyText}"
+local notEnoughMoneyTextDuration = {$notEnoughMoneyTextDuration}
+
+local nextTimeText = "{$nextTimeText}"
+local nextTimeTextDuration = {$nextTimeTextDuration}
+
+
+-- Initialise local Variables
+local endDialog = false
+local buy = false
+local nextTime = DisplayString(nextTimeText, 100, 200, Color.new(255,255,255))
+local notEnoughMoney = DisplayString(notEnoughMoneyText, 100, 200, Color.new(255,255,255))
+local thanks = DisplayString(thanksText, 100, 200, Color.new(255,255,255))
+local asksForBuying = DisplayString(askForBuyingText, 100, 200, Color.new(255,255,255))
+
+-- Kaufen Funktion
+function InteractWithMerchant(activator)
+    -- if ACTION is hit and Lara has not Start the dialog
+    if KeyIsHit(ActionID.{foreach from=$confirmKeys item=confirmKey key=key}{if $selectedConfirmKey == $key}{$confirmKey}{/if}{/foreach}) and not LaraStartMerchantDialog then
+        -- Initial abort buying and hide strings
+        buy = false
+        endDialog = false
+        HideString(thanks)
+        HideString(nextTime)
+        HideString(notEnoughMoney)
+        
+        -- Start dialog
+        LaraStartMerchantDialog = true
+        -- Set Cine Bars
+        SetCineBars({$cineBarsWeight}, {$cineBarsCreationSpeed})
+        
+        -- Move Lara to Merchant
+        LevelFuncs.Engine.Node.ChangeMoveablePositionOverTimespan(
+            activator:GetName(), --who
+            {$coordinates}, --where
+            false, --relative coordinates
+            {$positioningSpeed}, --how long
+            true --smooth
+        )
+        
+        -- Rotate Lara to Merchant
+        LevelFuncs.Engine.Node.ChangeMoveableRotationOverTimespan(
+            activator:GetName(), --who
+            {$direction}, --direction (degrees)
+            false, --relative coordinates
+            {$positioningSpeed}, --how long
+            true --smooth
+        )
+        
+        ShowString(asksForBuying)
+    -- otherwise
+    else
+        -- if confirmKey is hit and Lara has started the dialog and not buy and not end the dialog
+        if KeyIsHit(confirmKey) and LaraStartMerchantDialog and not buy and not endDialog then
+            HideString(asksForBuying)
+            if (GetItemCount(paymentItem) >= cost) then        
+                buy = true
+                ShowString(thanks, thanksTextDuration)
+                -- buy x items and remove y items for payment
+                Buy(buyItem, buyValue, paymentItem, cost)
+            else
+                -- not enough money
+                buy = false
+                ShowString(notEnoughMoney, notEnoughMoneyTextDuration)
+            end
+            -- remove cinebars (set 0 with speed of 90)
+            SetCineBars(0, cineBarsCreationSpeed)
+            endDialog = true
+            LaraStartMerchantDialog = false
+        end
+        
+        -- if cancelKey is hit and Lara has started the dialog and not end the dialog
+        if KeyIsHit(cancelKey) and LaraStartMerchantDialog and not endDialog then
+            buy = false
+            endDialog = true
+            HideString(asksForBuying)
+            ShowString(nextTime, nextTimeTextDuration)
+            -- remove cinebars (set 0 with speed of 90)
+            SetCineBars(0, cineBarsCreationSpeed)
+            LaraStartMerchantDialog = false
+        end
+    end
+end
+
+-- function when Lara leave the volume box
+function StopInteractWithMerchant(activator)
+    LaraStartMerchantDialog = false
+    -- remove cinebars (set 0 with speed of 90)
+    SetCineBars(0, cineBarsCreationSpeed)
+    -- hide all strings
+    HideString(asksForBuying)
+    HideString(thanks)
+    HideString(nextTime)
+end
+
+-- internal function for buying items
+function Buy(buyItem, buyValue, payItem, payValue)
+    TakeItem(payItem, payValue)
+    GiveItem(buyItem, buyValue, true)
+end]]></item>
+			<item name="trlevel.generators.dealer.infoTextBox"><![CDATA[Auf dieser Seite findest du den LUA Script Generator zum "<a href="https://www.trlevel.de/lexicon/index.php?entry/692">Händler</a>" Tutorial.]]></item>
+		</category>
+		<category name="trlevel.generators.general">
+			<item name="trlevel.generators.general.button.toTutorial"><![CDATA[Zum Tutorial]]></item>
+			<item name="trlevel.generators.general.button.down"><![CDATA[Zum LUA Code]]></item>
+			<item name="trlevel.generators.general.button.codeCopy"><![CDATA[LUA Code markieren]]></item>
+			<item name="trlevel.generators.general.tutorial"><![CDATA[Tutorial]]></item>
+		</category>
+		<category name="trlevel.generators"/>
 	</import>
 </language>

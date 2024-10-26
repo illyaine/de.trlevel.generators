@@ -2,6 +2,9 @@
 
 namespace wcf\form;
 
+use wcf\data\language\Language;
+use wcf\system\language\LanguageFactory;
+use wcf\data\user\UserProfile;
 use wcf\system\WCF;
 use wcf\util\StringUtil;
 
@@ -131,7 +134,7 @@ class DealerGeneratorForm extends AbstractForm	{
     ];
 
 	protected array $confirmKeys = [
-		'FORWARD',
+        'FORWARD',
 		'BACK',
 		'LEFT',
 		'RIGHT',
@@ -146,7 +149,7 @@ class DealerGeneratorForm extends AbstractForm	{
     ];
 
 	protected array $cancelKeys = [
-		'FORWARD',
+        'FORWARD',
 		'BACK',
 		'LEFT',
 		'RIGHT',
@@ -161,24 +164,14 @@ class DealerGeneratorForm extends AbstractForm	{
     ];
 
 
-
 	protected string $coordinates = '';
 	protected string $direction = '0';
 	protected string $cineBarsWeight = '120';
 	protected string $cineBarsCreationSpeed = '120';
-	
 	protected string $positioningSpeed = '2';
-	protected int $selectedPaymentItem = 0;
-	protected int $selectedBuyItem = 1;
-	protected int $selectedConfirmKey = 9;
-	protected int $selectedCancelKey = 4;
-
-
 	protected string $cost = '1';
 	protected string $buyItem = '';
 	protected string $buyValue = '1';
-	protected string $confirmKey = '';
-	protected string $cancelKey = '';
 	protected string $askForBuyingText = '';
 	protected string $thanksText = '';
 	protected string $thanksTextDuration = '2';
@@ -186,12 +179,17 @@ class DealerGeneratorForm extends AbstractForm	{
 	protected string $notEnoughMoneyTextDuration = '2';
 	protected string $nextTimeText = '';
 	protected string $nextTimeTextDuration = '2';
+	protected string $trlevelGeneratorsHeaderDealer = '';
 	
-	
+	protected int $selectedPaymentItem = 0;
+	protected int $selectedBuyItem = 1;
+	protected int $selectedConfirmKey = 9;
+	protected int $selectedCancelKey = 4;
 
 	
 	#[\Override]
-	public function readFormParameters()	{
+	public function readFormParameters()
+    {
 		parent::readFormParameters();
 		
 		
@@ -224,12 +222,17 @@ class DealerGeneratorForm extends AbstractForm	{
 		if (isset($_POST['buyValue'])) {
             $this->buyValue = StringUtil::trim($_POST['buyValue']);
         }
+
 		if (isset($_POST['confirmKey'])) {
-            $this->confirmKey = StringUtil::trim($_POST['confirmKey']);
-        }
+			$this->selectedConfirmKey = \intval($_POST['confirmKey']);
+		}
+
 		if (isset($_POST['cancelKey'])) {
-            $this->cancelKey = StringUtil::trim($_POST['cancelKey']);
-        }
+			$this->selectedCancelKey = \intval($_POST['cancelKey']);
+		}
+
+
+
 		if (isset($_POST['askForBuyingText'])) {
             $this->askForBuyingText = StringUtil::trim($_POST['askForBuyingText']);
         }
@@ -237,7 +240,7 @@ class DealerGeneratorForm extends AbstractForm	{
             $this->thanksText = StringUtil::trim($_POST['thanksText']);
         }
 		if (isset($_POST['thanksTextDuration'])) {
-            $this->thanksTextDuration = StringUtil::trim($_POST['thathanksTextDurationnksText']);
+            $this->thanksTextDuration = StringUtil::trim($_POST['thanksTextDuration']);
         }
 		if (isset($_POST['notEnoughMoneyText'])) {
             $this->notEnoughMoneyText = StringUtil::trim($_POST['notEnoughMoneyText']);
@@ -287,26 +290,30 @@ class DealerGeneratorForm extends AbstractForm	{
 			'selectedPaymentItem' => $this->selectedPaymentItem,
 
 			'cost' => $this->cost,
-			'buyItem' => $this->buyItem,
 			'buyItems' => $this->buyItems,
 			'selectedBuyItem' => $this->selectedBuyItem,
 			'buyValue' => $this->buyValue,
-			'confirmKey' => $this->confirmKey,
+
 			'confirmKeys' => $this->confirmKeys,
-			'selectedConfirmKey' => $this->selectedConfirmKey,
-			'cancelKey' => $this->cancelKey,
+            'selectedConfirmKey' => $this->selectedConfirmKey,
+
 			'cancelKeys' => $this->cancelKeys,
 			'selectedCancelKey' => $this->selectedCancelKey,
-			'askForBuyingText' => $this->askForBuyingText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.askForBuyingTextCode'),
-			'thanksText' => $this->thanksText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.thanksTextCode'),
+
+
+
+			'askForBuyingText' => $this->askForBuyingText = WCF::getLanguage()->get('trlevel.generators.dealer.askForBuyingTextCode'),
+			'thanksText' => $this->thanksText = WCF::getLanguage()->get('trlevel.generators.dealer.thanksTextCode'),
 			'thanksTextDuration' => $this->thanksTextDuration,
 			'notEnoughMoneyText' => $this->notEnoughMoneyText,
 			'notEnoughMoneyTextDuration' => $this->notEnoughMoneyTextDuration,
-			'nextTimeText' => $this->nextTimeText = WCF::getLanguage()->get('trlevel.particleGenerator.dealer.nextTimeTextCode'),
+			'nextTimeText' => $this->nextTimeText = WCF::getLanguage()->get('trlevel.generators.dealer.nextTimeTextCode'),
 			'nextTimeTextDuration' => $this->nextTimeTextDuration,
 			
 			
+			'trlevelGeneratorsHeaderDealer' => $this->trlevelGeneratorsHeaderDealer,
 		]);
 	}
-
+	
+	
 }

@@ -69,6 +69,7 @@ class DustGeneratorForm extends AbstractForm
 	protected int $lifeTime = 15;
     protected int $selectedDamageMode = 0;
     protected int $selectedPoisionMode = 0;
+    protected string $trlevelGeneratorsHeaderDust = '';
 	
 	#[\Override]
 	public function readFormParameters()
@@ -194,6 +195,8 @@ class DustGeneratorForm extends AbstractForm
 			'lifeTime' => $this->lifeTime,
             'selectedDamageMode' => $this->selectedDamageMode,
             'selectedPoisionMode' => $this->selectedPoisionMode,
+
+            'trlevelGeneratorsHeaderDust' => $this->trlevelGeneratorsHeaderDust,
 		]);
 	}
 }
