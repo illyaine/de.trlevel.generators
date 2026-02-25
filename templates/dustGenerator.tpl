@@ -165,7 +165,7 @@
                        <dl>
                            <h2 class="sectionTitle">{lang}trlevel.generators.dustGenerator.gravityTolerance{/lang}</h2>
                            <dd>
-                               <input type="text" id="gravityTolerance " name="gravityTolerance " value="{$gravityTolerance}">
+                               <input type="text" id="gravityTolerance" name="gravityTolerance" value="{$gravityTolerance}">
                                <small>{lang}trlevel.generators.dustGenerator.gravityTolerance.description{/lang}</small>
                            </dd>
                        </dl>
